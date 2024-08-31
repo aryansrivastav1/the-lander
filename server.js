@@ -47,6 +47,7 @@ app.post("/submit-form", (req, res) => {
   formData
     .save()
     .then(() => {
+      res.send("Your data has been successfully saved!");
       res.status(200).send(); // Send empty response for successful submission
     })
     .catch((err) => {
