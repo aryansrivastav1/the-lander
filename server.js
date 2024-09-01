@@ -44,12 +44,7 @@ app.post("/submit-form", (req, res) => {
   formData
     .save()
     .then(() => {
-<<<<<<< HEAD
       res.status(200).send("<h1>Your details have been successfully submitted!</h1>");
-=======
-      res.send("Your data has been successfully saved!");
-      res.status(200).send(); // Send empty response for successful submission
->>>>>>> 4b850fd51b8e2c798797a80559cf62531e1f19e0
     })
     .catch((err) => {
       console.error("Error saving data:", err);

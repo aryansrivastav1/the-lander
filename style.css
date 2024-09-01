@@ -152,6 +152,7 @@ b {
 .contact h1 {
     font-size: 2.5rem;
     margin-top: 10px;
+    text-align: center;
 }
 
 .about p {
@@ -172,6 +173,12 @@ b {
 
 .services {
     text-align: center;
+}
+
+    {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 10px;
 }
 
 .service-grid {

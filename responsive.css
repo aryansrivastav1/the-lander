@@ -127,18 +127,10 @@
         margin-bottom: 0;
     }
 
-    .about img {
-        width: 75%;
-    }
-
     .about p {
         font-size: 1rem;
         line-height: 1.5rem;
         min-width: 350px;
-    }
-
-    form {
-       width: 70%; 
     }
 
     form input,
