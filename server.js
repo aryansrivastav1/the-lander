@@ -44,7 +44,11 @@ app.post("/submit-form", (req, res) => {
   formData
     .save()
     .then(() => {
-      res.status(200).send(`<h1>Your details have been successfully submitted!</h1><br><br><p><a href="https://aryansrivastav1.github.io/the-lander/">Click for homepage</a><p>`);
+      res
+        .status(200)
+        .send(
+          `<h1>Your details have been successfully submitted!</h1><p><a href="javascript:history.back()">Click for homepage</a><p>`
+        );
     })
     .catch((err) => {
       console.error("Error saving data:", err);

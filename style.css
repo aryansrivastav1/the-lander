@@ -45,18 +45,14 @@ header .container svg {
     transform: translate(-50%, -50%) scale(0.613108);
     z-index: 0;
     cursor: pointer;
-    overflow: visible;
-}
-
-header h1 {
-    margin: 0;
 }
 
 .toggle-btn {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .hero {
@@ -173,12 +169,6 @@ b {
 
 .services {
     text-align: center;
-}
-
-    {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 10px;
 }
 
 .service-grid {
