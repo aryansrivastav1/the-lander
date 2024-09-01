@@ -74,18 +74,13 @@
 
     .service-item p {
         max-width: 400px;
+        line-height: 25px;
     }
 
     .form-container {
         flex-direction: column;
         align-items: center;
         margin: 0px;
-    }
-
-    form img {
-        width: 20rem;
-        height: auto;
-        margin-bottom: 20px;
     }
 
     .form-field {

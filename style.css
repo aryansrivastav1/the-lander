@@ -23,7 +23,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
 
@@ -33,7 +33,6 @@ header .container {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 header .container svg {
