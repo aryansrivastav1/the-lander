@@ -142,6 +142,10 @@
         max-width: 300px;
     }
 
+    .form-field {
+        width: 200%;
+    }
+
     form input,
     form textarea {
         font-size: 0.9rem;
