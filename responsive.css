@@ -94,6 +94,14 @@
 }
 
 @media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    header .container svg {
+        width: 160px;
+    }
+
     .hero {
         padding: 250px 0;
     }
