@@ -1,4 +1,10 @@
 /* Responsive Design */
+@media (max-width: 1250px) {
+    header .container {
+        max-width: 80%;
+    }
+}
+
 @media (max-width: 1150px) {
     .about p {
         margin-left: 50px;
@@ -48,6 +54,10 @@
     header .container svg {
         width: 200px;
         height: 80px;
+    }
+
+    .toggle-btn {
+        font-size: 1.5rem;
     }
 
     .hero {
