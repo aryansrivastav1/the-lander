@@ -76,7 +76,7 @@ function showError(message) {
   // Set new timeout to hide the error message after 5 seconds
   errorTimeout = setTimeout(function () {
     formError.style.visibility = "hidden";
-  }, 5000);
+  }, 3000);
 }
 
 // Function to hide error message

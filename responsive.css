@@ -93,12 +93,52 @@
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 230px 0;
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .hero-content p {
         font-size: 0.9rem;
+        max-width: 300px;
+    }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    b {
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .services h1,
+    .contact h1 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+
+    .about img {
+        width: 90%;
+    }
+
+    .about p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        min-width: 350px;
+    }
+
+    form {
+       width: 70%; 
     }
 
     form input,
@@ -107,7 +147,6 @@
     }
 
     .form-button {
-        width: 160%;
         padding: 15px 20px;
         font-size: 0.9rem;
     }

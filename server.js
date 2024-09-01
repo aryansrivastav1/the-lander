@@ -7,22 +7,19 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public")); // Serve static files like JS and CSS
+app.use(express.static("public"));
 
 // MongoDB Atlas connection
 mongoose
-  .connect(
-    "mongodb+srv://lander:JDVGGZtZYinZUnfk@cluster0.kgakyx9.mongodb.net/lander?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect("mongodb://localhost:27017/lander", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
-    console.log("Connected to MongoDB Atlas");
+    console.log("Connected to MongoDB Database");
   })
   .catch((err) => {
-    console.error("Error connecting to MongoDB Atlas", err);
+    console.error("Error connecting to MongoDB Database", err);
   });
 
 // Define a schema and model
@@ -47,10 +44,15 @@ app.post("/submit-form", (req, res) => {
   formData
     .save()
     .then(() => {
+<<<<<<< HEAD
+      res.status(200).send("<h1>Your details have been successfully submitted!</h1>");
+=======
       res.send("Your data has been successfully saved!");
       res.status(200).send(); // Send empty response for successful submission
+>>>>>>> 4b850fd51b8e2c798797a80559cf62531e1f19e0
     })
     .catch((err) => {
+      console.error("Error saving data:", err);
       res.status(500).send("Error saving data");
     });
 });
