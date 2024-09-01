@@ -11,10 +11,13 @@ app.use(express.static("public"));
 
 // MongoDB Atlas connection
 mongoose
-  .connect("mongodb://localhost:27017/lander", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://lander:JDVGGZtZYinZUnfk@cluster0.kgakyx9.mongodb.net/lander?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("Connected to MongoDB Database");
   })
@@ -44,9 +47,7 @@ app.post("/submit-form", (req, res) => {
   formData
     .save()
     .then(() => {
-      res
-        .status(200)
-        .send(
+      res.status(200).send(
           `<h1>Your details have been successfully submitted!</h1><p><a href="javascript:history.back()">Click for homepage</a><p>`
         );
     })
