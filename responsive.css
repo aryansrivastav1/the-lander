@@ -15,7 +15,7 @@
         margin-left: -60px;
     }
 
-    form img {
+    form .form-img {
         width: 25rem;
         height: 27rem;
     }
@@ -91,6 +91,16 @@
     form img {
         display: none;
     }
+
+    form .popup {
+        width: 250px;
+        padding: 20px 30px 40px;
+    }
+
+    form .popup p {
+        line-height: 1.5rem;
+        padding-bottom: 5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -143,7 +153,7 @@
     }
 
     .form-field {
-        width: 190%;
+        max-width: 190%;
     }
 
     form input,
@@ -158,5 +168,14 @@
 
     .formError {
         font-size: 0.71rem;
+    }
+
+    form .popup {
+        max-width: 200px;
+        padding: 20px 20px 30px;
+    }
+
+    form .popup p {
+        line-height: 1.5rem;
     }
 }
