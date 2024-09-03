@@ -155,4 +155,8 @@
         padding: 15px 20px;
         font-size: 0.9rem;
     }
+
+    .formError {
+        font-size: 0.71rem;
+    }
 }

@@ -11,13 +11,10 @@ app.use(express.static("public"));
 
 // MongoDB Atlas connection
 mongoose
-  .connect(
-    "mongodb+srv://lander:JDVGGZtZYinZUnfk@cluster0.kgakyx9.mongodb.net/lander?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect("mongodb+srv://lander:JDVGGZtZYinZUnfk@cluster0.kgakyx9.mongodb.net/lander?retryWrites=true&w=majority&appName=Cluster0", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to MongoDB Database");
   })
