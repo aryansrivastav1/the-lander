@@ -240,7 +240,7 @@ form textarea {
 }
 
 ::placeholder {
-    color: #8e8e8e;
+    color: #989898;
     transition: color 0.3s ease;
 }
 
@@ -252,6 +252,11 @@ form textarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     resize: vertical;
     height: 150px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: #02d2e0 2px solid;
 }
 
 body.dark-mode input,
