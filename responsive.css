@@ -104,7 +104,7 @@
     header {
         padding: 20px 0;
     }
-    
+
     header .right-header {
         display: flex;
         align-items: center;
@@ -154,7 +154,7 @@
 
     .hero {
         justify-content: center;
-        padding: 200px 10px;
+        padding: 230px 10px;
     }
 
     .hero-content {
@@ -280,7 +280,11 @@
     }
 
     .hero {
-        padding: 180px 0;
+        padding: 220px 0;
+    }
+
+    .hero-content {
+        gap: 20px;
     }
 
     .hero-content h1 {
@@ -296,9 +300,16 @@
     }
 
     .hero-btn {
-        display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+    }
+
+    .hero-link {
+        font-size: 0.9rem;
     }
 
     .about-text {
@@ -321,10 +332,15 @@
         margin-bottom: 0;
     }
 
+    .about {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     .about p {
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        max-width: 400px;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        max-width: 500px;
     }
 
     .service-grid {
@@ -357,7 +373,7 @@
     footer .footer-links {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     .formError {
