@@ -33,64 +33,25 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-// Variable to store the setTimeout timer
-let errorTimeout;
+// Hamburger Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const navLinks = document.getElementById("navigation");
+  const body = document.body;
 
-// Event listener for form submission
-document
-  .querySelector("#openPopupBtn")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    var firstName = document.getElementById("firstName").value.trim();
-    var lastName = document.getElementById("lastName").value.trim();
-    var email = document.getElementById("email").value.trim();
-    var query = document.getElementById("message").value.trim();
-
-    // Check if any field is empty
-    if (firstName === "" || lastName === "" || email === "" || query === "") {
-      showError("Please fill in all the details.");
-      return;
-    }
-
-    // Validate email format if all fields are filled
-    if (!isValidEmail(email)) {
-      showError("Please enter a valid email address.");
-      return;
-    }
-
-    // If all validations pass, show the popup
-    document.querySelector("#popup").classList.add("active");
-    document.querySelector("#popup-overlay").classList.add("active");
-    document.querySelector("body").classList.add("popup-active");
-    hideError(); // Hide error message if it's visible
+  hamburgerMenu.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+    body.classList.toggle("menu-active");
   });
 
-// Function to show error message
-function showError(message) {
-  var formError = document.querySelector("#formError");
-  formError.textContent = message;
-  formError.style.visibility = "visible";
-
-  // Clear existing timeout
-  clearTimeout(errorTimeout);
-
-  // Set new timeout to hide the error message after 5 seconds
-  errorTimeout = setTimeout(function () {
-    formError.style.visibility = "hidden";
-  }, 3000);
-}
-
-// Function to hide error message
-function hideError() {
-  var formError = document.querySelector("#formError");
-  formError.style.visibility = "hidden";
-}
-
-// Event listener for OKAY button in the popup
-document.querySelector("#closePopupBtn").addEventListener("click", function () {
-  document.querySelector("#popup").classList.remove("active");
-  document.querySelector("#popup-overlay").classList.remove("active");
-  document.querySelector("body").classList.remove("popup-active");
-  document.querySelector("#form").reset();
+  // Close the menu when clicking outside of it
+  document.addEventListener("click", function (event) {
+    if (
+      !hamburgerMenu.contains(event.target) &&
+      !navLinks.contains(event.target)
+    ) {
+      navLinks.classList.remove("active");
+      body.classList.remove("menu-active");
+    }
+  });
 });

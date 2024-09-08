@@ -122,19 +122,19 @@
                             <div class="form-name">
                                 <div class="form-fname">
                                     <label for="firstName" class="form-primary-detail">First name</label>
-                                    <input type="text" id="firstName" name="firstName" placeholder="Aryan" required>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Aryan">
                                 </div>
                                 <div class="form-fname">
                                     <label for="lastName" class="form-primary-detail">Last name</label>
-                                    <input type="text" id="lastName" name="lastName" placeholder="Srivastav" required>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Srivastav">
                                 </div>
                             </div>
                             <div class="form-other-details">
                                 <label for="email" class="form-primary-detail">Email address</label>
-                                <input type="email" id="email" name="email" placeholder="aryan@abc.com" required>
+                                <input type="email" id="email" name="email" placeholder="aryan@abc.com">
 
                                 <label for="role" class="form-primary-detail">Role</label>
-                                <select name="role" id="role" required>
+                                <select name="role" id="role">
                                     <option value="web-designer">Web Designer</option>
                                     <option value="web-developer">Web Developer</option>
                                     <option value="tester">QA Tester</option>
@@ -142,7 +142,7 @@
                                 </select>
 
                                 <label for="message" class="form-primary-detail">Message</label>
-                                <textarea id="message" name="message" placeholder="Write here..." required></textarea>
+                                <textarea id="message" name="message" placeholder="Write here..."></textarea>
 
                                 <label class="opt-in form-primary-detail email">Opt-in</label>
                                 <div class="input-chkbx">
@@ -230,27 +230,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Hamburger Menu
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburgerMenu = document.getElementById("hamburger-menu");
-            const navLinks = document.getElementById("navigation");
-            const body = document.body;
-
-            hamburgerMenu.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
-                body.classList.toggle("menu-active");
-            });
-            
-            // Close the menu when clicking outside of it
-            document.addEventListener("click", function (event) {
-                if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
-                    navLinks.classList.remove("active");
-                    body.classList.remove("menu-active");
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
