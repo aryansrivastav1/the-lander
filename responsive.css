@@ -1,23 +1,73 @@
 /* Responsive Design */
-@media (max-width: 1250px) {
-    header .container {
-        max-width: 80%;
-    }
-}
-
 @media (max-width: 1150px) {
+    .hero {
+        justify-content: space-between;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+    }
+
+    .hero-link {
+        font-size: 1rem;
+    }
+
+    .hero img {
+        width: 20rem;
+    }
+
+    .service-grid {
+        gap: 30px;
+    }
+
+    b {
+        font-size: 1.3rem;
+    }
+
+    .services h1,
+    .about h1 {
+        font-size: 2.2rem;
+    }
+
+    .service-grid h2 {
+        font-size: 1.15rem;
+    }
+
+    .about {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .about .container {
+        justify-content: space-between;
+    }
+
+    .about p {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+
     .about img {
-        width: 100%;
+        width: 45%;
     }
 
     .form-container {
-        align-items: center;
-        margin-left: -60px;
+        display: block;
+        text-align: center;
     }
 
     form .form-img {
-        width: 25rem;
-        height: 27rem;
+        display: none;
     }
 
     form .form-name {
@@ -25,13 +75,22 @@
         flex-direction: column;
     }
 
-    form input,
-    form textarea {
-        width: 150%;
+    .form-button {
+        width: 40%;
     }
 
-    .form-button {
-        width: 165%;
+    form .form-primary-detail {
+        text-align: left;
+    }
+
+    form .form-fname,
+    form .form-other-details {
+        width: 40%;
+        margin: auto;
+    }
+
+    form .input-chkbx {
+        text-align: left;
     }
 
     .formError {
@@ -42,17 +101,65 @@
 }
 
 @media (max-width: 920px) {
-    header .container svg {
-        width: 200px;
-        height: 80px;
+    header {
+        padding: 20px 0;
+    }
+    
+    header .right-header {
+        display: flex;
+        align-items: center;
     }
 
-    .toggle-btn {
+    header .navigation {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: -250px;
+        background: #d2eeff;
+        box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        border-radius: 0 0 0 10px;
+        z-index: 9;
+        transition: right 0.3s ease;
+    }
+
+    .dark-mode header .navigation {
+        background: #01252d;
+    }
+
+    header .navigation.active {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+    }
+
+    header .nav-links {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+        padding: 0px 40px 15px;
+    }
+
+    header .right-header ul {
+        gap: 25px;
+    }
+
+    header .hamburger-menu {
+        display: block;
+    }
+
+    header .toggle-btn {
         font-size: 1.5rem;
     }
 
     .hero {
-        padding: 250px 10px;
+        justify-content: center;
+        padding: 200px 10px;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
     }
 
     .hero-content h1 {
@@ -60,16 +167,28 @@
     }
 
     .hero-content p {
-        font-size: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .hero img {
+        display: none;
+    }
+
+    .services h1,
+    .contact h1,
+    .about h1 {
+        font-size: 2.5rem;
     }
 
     .service-grid {
         flex-direction: column;
         align-items: center;
+        margin: 10px;
     }
 
     .service-item {
-        max-width: 100%;
+        max-width: 40%;
         margin: 10px 0;
     }
 
@@ -78,18 +197,54 @@
         line-height: 25px;
     }
 
-    .form-container {
+    .about .container {
+        justify-content: center;
+    }
+
+    .about-text {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0px;
     }
 
-    .form-field {
-        margin-left: -130px;
+    .about-text p {
+        text-align: justify;
+        max-width: 600px;
     }
 
-    form img {
+    .about p {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+
+    .about img {
         display: none;
+    }
+
+    .form-container {
+        margin-right: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form .form-fname,
+    form .form-other-details {
+        width: 140%;
+    }
+
+    form .input-chkbx {
+        text-align: left;
+    }
+
+    .form-button {
+        width: 150%;
+    }
+
+    .formError {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
     }
 
     form .popup {
@@ -103,26 +258,47 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     header {
         padding: 15px 0;
     }
 
     header .container svg {
-        width: 160px;
+        width: 120px;
+    }
+
+    header .right-header a {
+        font-size: 1rem;
+    }
+
+    header .nav-links {
+        display: none;
+    }
+
+    header .right-header .navigation {
+        top: 55px;
     }
 
     .hero {
-        padding: 250px 0;
+        padding: 180px 0;
     }
 
     .hero-content h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 0 20px;
     }
 
     .hero-content p {
         font-size: 0.9rem;
         max-width: 300px;
+        margin: 0 20px;
+    }
+
+    .hero-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .about-text {
@@ -132,8 +308,7 @@
     }
 
     b {
-        text-align: center;
-        max-width: 300px;
+        margin: auto 20px;
     }
 
     .about h1 {
@@ -142,18 +317,27 @@
 
     .services h1,
     .contact h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         margin-bottom: 0;
     }
 
     .about p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        max-width: 300px;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        max-width: 400px;
+    }
+
+    .service-grid {
+        margin: 30px;
+    }
+
+    .service-item {
+        max-width: 250px;
     }
 
     .form-field {
-        max-width: 190%;
+        min-width: 20%;
+        margin: 0 30px;
     }
 
     form input,
@@ -161,9 +345,19 @@
         font-size: 0.9rem;
     }
 
+    form select {
+        width: 110%;
+    }
+
     .form-button {
         padding: 15px 20px;
         font-size: 0.9rem;
+    }
+
+    footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .formError {

@@ -1,0 +1,7 @@
+Connection String: mongodb+srv://lander:JDVGGZtZYinZUnfk@cluster0.kgakyx9.mongodb.net/lander?retryWrites=true&w=majority&appName=Cluster0
+
+Localhost (HTML): http://localhost:3000/submit-form
+
+Localhost (HTML, For Home WiFi): 192.168.1.7:3000/submit-form
+
+MongoDB Compass (server.js): mongodb://localhost:27017/lander

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-mode");
     toggleModeButton.textContent = "🌞"; // Set light mode icon if dark mode is active
   } else {
-    toggleModeButton.textContent = "🌙"; // Set dark mode icon if light mode is active
+    toggleModeButton.textContent = "🌚"; // Set dark mode icon if light mode is active
   }
 });
 
@@ -22,7 +22,7 @@ toggleModeButton.addEventListener("click", () => {
     toggleModeButton.textContent = "🌞"; // Light mode icon
     localStorage.setItem("theme", "dark-mode"); // Save dark mode preference
   } else {
-    toggleModeButton.textContent = "🌙"; // Dark mode icon
+    toggleModeButton.textContent = "🌚"; // Dark mode icon
     localStorage.setItem("theme", "light-mode"); // Save light mode preference
   }
 });
@@ -37,32 +37,34 @@ function isValidEmail(email) {
 let errorTimeout;
 
 // Event listener for form submission
-document.querySelector("#openPopupBtn").addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+document
+  .querySelector("#openPopupBtn")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-  var firstName = document.getElementById("firstName").value.trim();
-  var lastName = document.getElementById("lastName").value.trim();
-  var email = document.getElementById("email").value.trim();
-  var query = document.getElementById("message").value.trim();
+    var firstName = document.getElementById("firstName").value.trim();
+    var lastName = document.getElementById("lastName").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var query = document.getElementById("message").value.trim();
 
-  // Check if any field is empty
-  if (firstName === "" || lastName === "" || email === "" || query === "") {
-    showError("Please fill in all the details.");
-    return;
-  }
+    // Check if any field is empty
+    if (firstName === "" || lastName === "" || email === "" || query === "") {
+      showError("Please fill in all the details.");
+      return;
+    }
 
-  // Validate email format if all fields are filled
-  if (!isValidEmail(email)) {
-    showError("Please enter a valid email address.");
-    return;
-  }
+    // Validate email format if all fields are filled
+    if (!isValidEmail(email)) {
+      showError("Please enter a valid email address.");
+      return;
+    }
 
-  // If all validations pass, show the popup
-  document.querySelector("#popup").classList.add("active");
-  document.querySelector("#popup-overlay").classList.add("active");
-  document.querySelector("body").classList.add("popup-active");
-  hideError(); // Hide error message if it's visible
-});
+    // If all validations pass, show the popup
+    document.querySelector("#popup").classList.add("active");
+    document.querySelector("#popup-overlay").classList.add("active");
+    document.querySelector("body").classList.add("popup-active");
+    hideError(); // Hide error message if it's visible
+  });
 
 // Function to show error message
 function showError(message) {
